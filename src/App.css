@@ -2,8 +2,21 @@
   height:100vh;
   text-align: center;
   background-color:aquamarine;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.board{
+  width:580px;
+  height: 580px;
+  border:1px solid black;
+  display:flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 4px;
+padding:2px;
+}
 
 
 
