@@ -22,10 +22,13 @@ function App() {
     }
     return array;
   }
+  const flip = () => {
+    console.log('hila');
+  };
 
   const mapOfCard = () => {
     return shuffle(arrayOfCard).map((onecard, i) => {
-      return <Card name={onecard} key={i}></Card>;
+      return <Card handleClick={flip} name={onecard} key={i}></Card>;
     });
   };
   return (
