@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import './App.css';
 import Card from './component/card/Card';
 
 function App() {
+  const [isFlipped, setIsFlipped] = useState(false);
   const arrayOfCard = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 
   function shuffle(array) {
@@ -23,12 +25,20 @@ function App() {
     return array;
   }
   const flip = () => {
-    console.log('hila');
+    setIsFlipped((prevalue) => !prevalue);
+    console.log('work');
+    // if (isFlipped) {
+    // isflipped === true
+    //   setIsFlipped(false);
+    //   setIsFlipped(true);
+    // }
   };
 
   const mapOfCard = () => {
     return shuffle(arrayOfCard).map((onecard, i) => {
-      return <Card handleClick={flip} name={onecard} key={i}></Card>;
+      return (
+        <Card flip={isFlipped} handleClick={flip} name={onecard} key={i}></Card>
+      );
     });
   };
   return (
