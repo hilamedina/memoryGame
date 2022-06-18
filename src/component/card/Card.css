@@ -2,12 +2,8 @@
    width:140px;
    height:140px; 
    border:1px solid black;
-   color:black;
-   /* display:flex; */
-   /* background-color:red; */
-   width: 140px;
-   height: 140px;
    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+   background-color: transparent;
 }
 
  /* This container is needed to position the front and back side */
@@ -36,13 +32,13 @@
  
  /* Style the front side (fallback if image is missing) */
  .flip-card-front {
-   background-color: red;
+   /* background-color: red; */
    color: black;
  }
  
  /* Style the back side */
  .flip-card-back {
-   background-color: dodgerblue;
+   /* background-color: dodgerblue; */
    color: white;
    transform: rotateY(180deg);
  }
